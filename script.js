@@ -6,7 +6,6 @@ const randomBtn = document.querySelector('#random-btn');
 async function getAdvice(){
     const response = await fetch(apiUrl);
     const data = await response.json();
-    console.log('clicked');
 
     adviceId.innerHTML = `Advice #${data.slip.id}`;
     adviceText.innerHTML = data.slip.advice;
